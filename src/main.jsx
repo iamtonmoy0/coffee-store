@@ -19,7 +19,8 @@ element:<AddCoffee/>
 },
 {
   path:RoutePath.UPDATE,
-  element:<UpdateCoffee/>
+  element:<UpdateCoffee/>, 
+    loader: ({params}) => fetch(`http://localhost:5000/coffee/${params.id}`)
 }
   
 ])
